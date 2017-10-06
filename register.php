@@ -15,7 +15,7 @@
     <div class="col-sm-3">
 <label> First Name: </label>
     </div>
-<input type="text" name="fname"/>
+<input type="text" name="fname"  title="Please enter a valid name"/>
 </div>
 <br>
 <div class="row">
@@ -25,6 +25,20 @@
 <input type="text" name="lname"/>
 </div>
 <br>
+        <div class="row">
+            <div class="col-sm-3">
+            <label> Email: </label>
+            </div>
+            <input type="email" name="email">
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-3">
+                <label> Phone: </label>
+            </div>
+            <input type="int" name="phone">
+        </div>
+        <br/>
         <div class="row">
             <div class="col-sm-3">
             <label> Gender: </label>
@@ -87,7 +101,9 @@
     echo"<table class='table-bordered' cellspacing='15px' border='1px' style='width:980px;height:auto;'>
 		<tr> 
 			<th> First Name </th> 
-			<th> Last Name </th> 
+			<th> Last Name </th>
+			<th> Email </th>
+			<th> Phone </th> 
 			<th> Gender </th>
 			<th> Year </th>
 			<th> Faculty</th>
@@ -99,6 +115,8 @@
         echo "<tr>
         			<td> ".$row["First_Name"]." </td>
         			<td> ".$row["Last_Name"]." </td>
+        			<td> ".$row["Email"]." </td>
+        			<td> ".$row["Phone"]." </td>
         			<td> ".$row["Gender"]." </td>
         			<td> ".$row["Year"]." </td> 
         			<td> ".$row["Faculty"]." </td>
